@@ -375,6 +375,255 @@ footer{
 .status.ok{border-color:#111; }
 .status.err{border-color:#111; background:#EDEDED}
 
+
+/* ============================================================
+   FEATURED DECK — Demystifying Machine Learning
+   ============================================================ */
+.topbar nav a.nav-feature{
+  background:var(--black); color:#fff; border-radius:6px;
+}
+.topbar nav a.nav-feature:hover{background:#2B2B2B; color:#fff}
+
+.ml-feature{
+  margin-top:3rem;
+  border:1px solid var(--black);
+  border-radius:var(--radius);
+  background:#fff;
+  scroll-margin-top:5.5rem;
+}
+.ml-head{
+  padding:2rem 2rem 1.6rem;
+  background:var(--black); color:#fff;
+  border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+}
+.ml-eyebrow{
+  font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:#BDBDBD; margin:0 0 .6rem;
+}
+.ml-head h3{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:clamp(1.7rem, 4.6vw, 2.7rem); letter-spacing:-.03em; line-height:1.05;
+  margin:0 0 .7rem;
+}
+.ml-head p.sub{max-width:62ch; margin:0 0 1.2rem; color:#D9D9D9}
+.ml-meta{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.3rem}
+.ml-meta span{
+  font-size:.8rem; font-weight:600; color:#fff;
+  border:1px solid #5A5A5A; border-radius:5px; padding:.2rem .65rem;
+}
+.ml-dl{
+  display:inline-block; font-weight:700; font-size:.92rem;
+  color:#000; background:#fff; border:1px solid #fff; border-radius:6px;
+  padding:.55rem 1.1rem;
+}
+.ml-dl:hover{background:#E9E9E9; color:#000; text-decoration:none}
+
+.ml-tabs{
+  display:flex; flex-wrap:wrap; gap:.35rem;
+  padding:.8rem 1.2rem;
+  border-bottom:1px solid var(--line);
+  background:var(--paper-2);
+}
+.ml-tabs button{
+  font-family:inherit; font-size:.88rem; font-weight:600;
+  color:var(--ink-soft); background:transparent;
+  border:1px solid transparent; border-radius:6px;
+  padding:.4rem .85rem; cursor:pointer;
+}
+.ml-tabs button:hover{color:var(--ink); border-color:var(--line); background:#fff}
+.ml-tabs button[aria-selected="true"]{background:var(--black); color:#fff}
+.ml-tabs button:focus-visible{outline:2px solid var(--black); outline-offset:2px}
+.ml-tabs{display:none}
+.ml-feature.js .ml-tabs{display:flex}
+
+.ml-body{padding:1.8rem 2rem 2rem}
+.ml-feature.js .ml-panel{display:none}
+.ml-feature.js .ml-panel.on{display:block}
+.ml-panel + .ml-panel{margin-top:2.4rem}
+.ml-feature.js .ml-panel + .ml-panel{margin-top:0}
+
+.ml-panel h4{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:1.35rem; letter-spacing:-.02em; margin:0 0 .35rem;
+}
+.ml-lede{color:var(--ink-soft); max-width:64ch; margin:0 0 1.5rem}
+
+.ml-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:1rem}
+.ml-grid.wide{grid-template-columns:repeat(auto-fit, minmax(300px,1fr))}
+.ml-tile{
+  border:1px solid var(--line); border-radius:8px; padding:1.1rem 1.15rem;
+  background:#fff;
+}
+.ml-tile .n{
+  font-family:"Syne", sans-serif; font-weight:800; font-size:.85rem;
+  color:var(--grey); letter-spacing:.06em;
+}
+.ml-tile h5{
+  font-family:"Syne", sans-serif; font-weight:700; font-size:1.05rem;
+  letter-spacing:-.01em; margin:.15rem 0 .35rem;
+}
+.ml-tile p{margin:0; font-size:.93rem; color:var(--ink-soft); line-height:1.55}
+.ml-tile.dark{background:var(--black); border-color:var(--black)}
+.ml-tile.dark h5{color:#fff}
+.ml-tile.dark p, .ml-tile.dark .n{color:#C9C9C9}
+
+.ml-fig{
+  border:1px solid var(--line); border-radius:8px; background:#fff;
+  padding:1.1rem 1.15rem 1rem; margin:0;
+}
+.ml-fig figcaption{font-size:.88rem; color:var(--ink-soft); margin-top:.7rem}
+.ml-fig .cap-title{
+  font-family:"Syne", sans-serif; font-weight:700; font-size:1rem; margin:0 0 .7rem;
+}
+.ml-scroll{overflow-x:auto}
+.ml-scroll svg{display:block; width:100%; height:auto}
+.ml-scroll svg.min{min-width:540px}
+.ml-fig svg text{font-family:"Karla", system-ui, sans-serif}
+
+.ml-legend{display:flex; flex-wrap:wrap; gap:1rem; font-size:.85rem; font-weight:600; margin-bottom:.4rem}
+.ml-legend i{
+  display:inline-block; width:22px; height:0; border-top:3px solid #000;
+  vertical-align:middle; margin-right:.4rem;
+}
+.ml-legend i.g{border-top:3px dashed #8A8A8A}
+
+.ml-two{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:1rem; margin-bottom:1rem}
+.ml-two > *{min-width:0}
+@media (max-width:820px){ .ml-two{grid-template-columns:1fr} }
+.ml-block{margin-top:1.4rem}
+.ml-sub{
+  font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--grey); margin:0 0 .7rem;
+}
+
+/* step rows */
+.ml-steps{display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:1rem}
+.ml-step{border-top:3px solid var(--black); padding-top:.6rem}
+.ml-step b{
+  font-family:"Syne", sans-serif; font-size:.85rem; color:var(--grey); letter-spacing:.06em;
+}
+.ml-step h5{font-family:"Syne", sans-serif; font-size:1.05rem; margin:.1rem 0 .3rem}
+.ml-step p{margin:0; font-size:.9rem; color:var(--ink-soft); line-height:1.5}
+
+/* rising bars */
+.ml-rise{display:flex; align-items:flex-end; gap:.6rem; height:210px}
+.ml-rise div{
+  flex:1; border-radius:8px 8px 0 0; background:var(--black); color:#fff;
+  display:flex; align-items:flex-start; justify-content:center; text-align:center;
+  padding:.65rem .35rem; font-weight:700; font-size:.82rem; line-height:1.25;
+}
+.ml-rise div:nth-child(1){height:34%}
+.ml-rise div:nth-child(2){height:50%}
+.ml-rise div:nth-child(3){height:66%}
+.ml-rise div:nth-child(4){height:82%}
+.ml-rise div:nth-child(5){height:100%; background:#fff; color:var(--black); border:2px dashed var(--black); border-bottom:0}
+
+/* loop */
+.ml-loop{display:flex; flex-wrap:wrap; align-items:center; gap:.5rem}
+.ml-loop span.s{
+  font-weight:700; font-size:.9rem; border:1px solid var(--black);
+  border-radius:6px; padding:.45rem .8rem; background:#fff;
+}
+.ml-loop span.a{font-weight:700; color:var(--grey)}
+.ml-loop span.back{
+  flex-basis:100%; font-size:.85rem; color:var(--ink-soft); margin-top:.2rem;
+}
+
+.ml-pills{display:flex; flex-wrap:wrap; gap:.5rem}
+.ml-pills span{
+  font-weight:700; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--black); border-radius:5px; padding:.3rem .65rem;
+}
+.ml-guard{
+  margin:1rem 0 0; padding:.8rem 1rem; border-left:3px solid var(--black);
+  background:var(--paper-2); font-size:.93rem;
+}
+
+/* trust table */
+.ml-table{width:100%; border-collapse:collapse; font-size:.95rem}
+.ml-table th{
+  text-align:left; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--grey); padding:.5rem .8rem; border-bottom:2px solid var(--black);
+}
+.ml-table td{padding:.7rem .8rem; border-bottom:1px solid var(--line); vertical-align:top}
+.ml-table td:first-child{font-weight:700; white-space:nowrap}
+
+.ml-take{
+  margin-top:1.6rem; padding:1.6rem 1.7rem; border-radius:8px;
+  background:var(--black); color:#fff;
+}
+.ml-take .q{
+  font-family:"Syne", sans-serif; font-weight:800; letter-spacing:-.02em;
+  font-size:clamp(1.4rem, 3.6vw, 2rem); line-height:1.1; margin:0 0 .6rem;
+}
+.ml-take p{margin:.2rem 0 0; color:#D0D0D0; font-size:.95rem; max-width:62ch}
+
+.ml-note{font-size:.82rem; color:var(--ink-soft); margin:1.4rem 0 0}
+
+@media (max-width:640px){
+  .ml-head{padding:1.5rem 1.2rem 1.3rem}
+  .ml-body{padding:1.3rem 1.1rem 1.5rem}
+  .ml-rise{height:190px}
+  .ml-rise div{font-size:.72rem; padding:.5rem .2rem}
+}
+@media print{
+  .ml-tabs{display:none !important}
+  .ml-feature.js .ml-panel{display:block !important}
+}
+
+
+
+/* Featured ML project preview — uses the portfolio's existing monochrome style */
+.ml-project-preview{margin:0 0 1.25rem}
+.ml-project-preview > p{max-width:76ch}
+.ml-project-preview .ml-preview-visual{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:.7rem;
+  align-items:stretch;
+  margin:1.25rem 0;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--paper-2);
+}
+.ml-preview-center{
+  grid-column:1 / -1;
+  justify-self:center;
+  text-align:center;
+  background:var(--black);
+  color:#fff;
+  border-radius:7px;
+  padding:.65rem 1.5rem;
+  font-family:"Syne",sans-serif;
+  font-weight:800;
+  line-height:1.25;
+  margin-bottom:.2rem;
+}
+.ml-preview-node{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:.18rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:#fff;
+  padding:.8rem .65rem;
+  text-align:center;
+}
+.ml-preview-node b{font-family:"Syne",sans-serif;font-size:.78rem;color:var(--grey)}
+.ml-preview-node span{font-weight:700;font-size:.88rem;line-height:1.3}
+.ml-preview-node small{font-size:.78rem;color:var(--ink-soft);line-height:1.35}
+.ml-project-preview > p:last-child{margin-bottom:0}
+@media(max-width:760px){
+  .ml-project-preview .ml-preview-visual{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ml-preview-node:last-child{grid-column:1 / -1}
+}
+@media(max-width:420px){
+  .ml-project-preview .ml-preview-visual{grid-template-columns:1fr}
+  .ml-preview-node:last-child{grid-column:auto}
+}
 </style>
 </head>
 
@@ -385,6 +634,7 @@ footer{
   <div class="wrap">
     <a class="brand" href="#top">Suraj Chadha</a>
     <nav>
+      <a class="nav-feature" href="#ml-deck" aria-label="Featured Machine Learning showcase">✦ ML Showcase</a>
       <a href="#experience">Experience</a>
       <a href="#internships">Internships</a>
       <a href="#projects">Projects</a>
@@ -539,6 +789,26 @@ footer{
       <h2>Projects</h2><span class="bar"></span>
     </div>
 
+    <!-- Featured work preview: sourced from the Demystifying Machine Learning presentation -->
+    <article class="card ml-project-preview">
+      <div class="card-top">
+        <h3>Featured Work · Demystifying Machine Learning</h3>
+        <span class="when">Interactive showcase</span>
+      </div>
+      <p class="org">Machine Learning · Visual explanation · Business-first model selection</p>
+      <p>A visual guide to choosing model families based on the business question, available data, and the cost of being wrong. Explore the model map, regression and classification examples, clustering, neural networks, generative models, reinforcement learning, and a practical model-selection checklist below.</p>
+      <div class="ml-preview-visual" role="img" aria-label="Visual summary connecting business questions to five machine learning model families">
+        <div class="ml-preview-center">Machine<br>Learning</div>
+        <div class="ml-preview-node"><b>01</b><span>Supervised</span><small>Predict outcomes</small></div>
+        <div class="ml-preview-node"><b>02</b><span>Unsupervised</span><small>Find patterns</small></div>
+        <div class="ml-preview-node"><b>03</b><span>Neural networks</span><small>Learn features</small></div>
+        <div class="ml-preview-node"><b>04</b><span>Generative AI</span><small>Create content</small></div>
+        <div class="ml-preview-node"><b>05</b><span>Reinforcement</span><small>Learn from feedback</small></div>
+      </div>
+      <div class="tags"><span>Machine Learning</span><span>Data Visualization</span><span>Model Selection</span><span>Business Applications</span></div>
+      <p><a href="#ml-deck">Explore the interactive visuals ↓</a> &nbsp;·&nbsp; <a href="Demystifying-Machine-Learning.pptx" download="Demystifying-Machine-Learning.pptx">Download presentation</a></p>
+    </article>
+
     <div class="grid-2">
       <article class="card">
         <h3>Web Form Flask Live Project (US-based client)</h3>
@@ -569,6 +839,217 @@ footer{
         </ul>
         <p><a href="https://github.com/SurajChadha001/Tableau_Projects" target="_blank" rel="noopener">View on GitHub</a></p>
       </article>
+    </div>
+
+    <!-- ============ FEATURED: DEMYSTIFYING MACHINE LEARNING ============ -->
+    <div class="ml-feature" id="ml-deck">
+      <div class="ml-head">
+        <p class="ml-eyebrow">Featured presentation</p>
+        <h3>Demystifying Machine Learning</h3>
+        <p class="sub">A practical map of model families, business questions, and trade-offs.</p>
+        <div class="ml-meta"><span>20 slides</span><span>5 model families</span><span>Business-first</span></div>
+        <a class="ml-dl" href="Demystifying-Machine-Learning.pptx" download="Demystifying-Machine-Learning.pptx">⤓ Download the full deck</a>
+      </div>
+
+      <div class="ml-tabs" role="tablist" aria-label="Sections of the deck">
+        <button type="button" role="tab" id="ml-t-overview" aria-controls="ml-p-overview" aria-selected="true">Overview</button>
+        <button type="button" role="tab" id="ml-t-map" aria-controls="ml-p-map" aria-selected="false">Model map</button>
+        <button type="button" role="tab" id="ml-t-sup" aria-controls="ml-p-sup" aria-selected="false">Supervised</button>
+        <button type="button" role="tab" id="ml-t-uns" aria-controls="ml-p-uns" aria-selected="false">Unsupervised</button>
+        <button type="button" role="tab" id="ml-t-neu" aria-controls="ml-p-neu" aria-selected="false">Neural &amp; more</button>
+        <button type="button" role="tab" id="ml-t-choose" aria-controls="ml-p-choose" aria-selected="false">How to choose</button>
+      </div>
+
+      <div class="ml-body">
+        
+<section class="ml-panel on" id="ml-p-overview" role="tabpanel" aria-labelledby="ml-t-overview">
+  <h4>Machine learning is pattern-finding with a purpose</h4>
+  <p class="ml-lede">Models learn relationships from data to make predictions, decisions, or generate content. The deck's starting point: begin with the outcome, not the algorithm.</p>
+  <p class="ml-sub">The business question decides the shape of the answer</p>
+  <div class="ml-grid">
+    <div class="ml-tile"><span class="n">01</span><h5>Predict a number</h5><p>Revenue, demand, time, risk</p></div>
+    <div class="ml-tile"><span class="n">02</span><h5>Choose a category</h5><p>Churn, fraud, approval, topic</p></div>
+    <div class="ml-tile"><span class="n">03</span><h5>Find hidden groups</h5><p>Segments, behaviors, anomalies</p></div>
+    <div class="ml-tile"><span class="n">04</span><h5>Generate or recommend</h5><p>Text, images, products, next actions</p></div>
+  </div>
+  <div class="ml-grid wide ml-block">
+    <div class="ml-tile dark"><span class="n">THE CORE IDEA</span><h5>Find signal</h5><p>Separate repeatable relationships from noise.</p></div>
+    <div class="ml-tile dark"><span class="n">THE CORE IDEA</span><h5>Make it useful</h5><p>Match the model to the question, the data, and the cost of being wrong.</p></div>
+  </div>
+</section>
+        
+<section class="ml-panel" id="ml-p-map" role="tabpanel" aria-labelledby="ml-t-map">
+  <h4>The model family map</h4>
+  <p class="ml-lede">Different families answer different kinds of questions. The first decision is the learning setup, not the brand name of the tool.</p>
+  <figure class="ml-fig">
+    <div class="ml-scroll"><svg class="min" viewBox="0 0 720 380" role="img" aria-label="Map of five model families around the centre: supervised, unsupervised, representation, feedback and creation.">
+  <line x1="360" y1="190" x2="360.0" y2="52.0" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="360" y1="190" x2="602.5" y2="147.4" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="360" y1="190" x2="509.9" y2="301.6" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="360" y1="190" x2="210.1" y2="301.6" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="360" y1="190" x2="117.5" y2="147.4" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="360" cy="190" r="64" fill="#000"/>
+  <text x="360" y="186" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">Machine</text>
+  <text x="360" y="207" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">learning</text>
+  <rect x="268.0" y="22.0" width="184" height="60" rx="8" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="360.0" y="44.0" font-size="12" font-weight="700" fill="#8A8A8A" text-anchor="middle">FAMILY 01</text><text x="360.0" y="61.0" font-size="16" font-weight="800" fill="#000" text-anchor="middle">Supervised</text><text x="360.0" y="76.0" font-size="11.5" fill="#5A5A5A" text-anchor="middle">learns from answer-key examples</text><rect x="510.5" y="117.4" width="184" height="60" rx="8" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="602.5" y="139.4" font-size="12" font-weight="700" fill="#8A8A8A" text-anchor="middle">FAMILY 02</text><text x="602.5" y="156.4" font-size="16" font-weight="800" fill="#000" text-anchor="middle">Unsupervised</text><text x="602.5" y="171.4" font-size="11.5" fill="#5A5A5A" text-anchor="middle">finds structure without labels</text><rect x="417.9" y="271.6" width="184" height="60" rx="8" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="509.9" y="293.6" font-size="12" font-weight="700" fill="#8A8A8A" text-anchor="middle">FAMILY 03</text><text x="509.9" y="310.6" font-size="16" font-weight="800" fill="#000" text-anchor="middle">Representation</text><text x="509.9" y="325.6" font-size="11.5" fill="#5A5A5A" text-anchor="middle">neural networks, layered</text><rect x="118.1" y="271.6" width="184" height="60" rx="8" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="210.1" y="293.6" font-size="12" font-weight="700" fill="#8A8A8A" text-anchor="middle">FAMILY 05</text><text x="210.1" y="310.6" font-size="16" font-weight="800" fill="#000" text-anchor="middle">Feedback</text><text x="210.1" y="325.6" font-size="11.5" fill="#5A5A5A" text-anchor="middle">reinforcement learning</text><rect x="25.5" y="117.4" width="184" height="60" rx="8" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="117.5" y="139.4" font-size="12" font-weight="700" fill="#8A8A8A" text-anchor="middle">FAMILY 04</text><text x="117.5" y="156.4" font-size="16" font-weight="800" fill="#000" text-anchor="middle">Creation</text><text x="117.5" y="171.4" font-size="11.5" fill="#5A5A5A" text-anchor="middle">generative models</text>
+</svg></div>
+    <figcaption>Five families, numbered as in the deck: supervised, unsupervised, representation, creation and feedback.</figcaption>
+  </figure>
+</section>
+        
+<section class="ml-panel" id="ml-p-sup" role="tabpanel" aria-labelledby="ml-t-sup">
+  <h4>Supervised learning learns from answer-key examples</h4>
+  <p class="ml-lede">Historical inputs are paired with known outcomes. The model learns a reusable mapping, then applies it to new cases: <b>inputs → known outcome → new case</b>.</p>
+
+  <div class="ml-two">
+    <figure class="ml-fig">
+      <p class="cap-title">Regression predicts a quantity: “How much?” or “How long?”</p>
+      <div class="ml-legend"><span><i></i>Predicted demand</span><span><i class="g"></i>Actual demand</span></div>
+      <div class="ml-scroll"><svg viewBox="0 0 560 285" role="img" aria-label="Line chart of predicted and actual demand from January to May, both rising from about 120 to about 184.">
+  <line x1="40" y1="200.0" x2="540" y2="200.0" stroke="#E3E3E3"/><text x="34" y="204.0" font-size="12" fill="#5A5A5A" text-anchor="end">120</text><line x1="40" y1="165.0" x2="540" y2="165.0" stroke="#E3E3E3"/><text x="34" y="169.0" font-size="12" fill="#5A5A5A" text-anchor="end">140</text><line x1="40" y1="130.0" x2="540" y2="130.0" stroke="#E3E3E3"/><text x="34" y="134.0" font-size="12" fill="#5A5A5A" text-anchor="end">160</text><line x1="40" y1="95.0" x2="540" y2="95.0" stroke="#E3E3E3"/><text x="34" y="99.0" font-size="12" fill="#5A5A5A" text-anchor="end">180</text>
+  <polyline points="70,208.8 180,173.8 290,154.5 400,121.2 510,95.0" fill="none" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="7 5" stroke-linejoin="round"/>
+  <polyline points="70,200.0 180,165.0 290,147.5 400,109.0 510,88.0" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="70" cy="200.0" r="4.5" fill="#000"/><circle cx="180" cy="165.0" r="4.5" fill="#000"/><circle cx="290" cy="147.5" r="4.5" fill="#000"/><circle cx="400" cy="109.0" r="4.5" fill="#000"/><circle cx="510" cy="88.0" r="4.5" fill="#000"/><circle cx="70" cy="208.8" r="4.5" fill="#fff" stroke="#8A8A8A" stroke-width="2"/><circle cx="180" cy="173.8" r="4.5" fill="#fff" stroke="#8A8A8A" stroke-width="2"/><circle cx="290" cy="154.5" r="4.5" fill="#fff" stroke="#8A8A8A" stroke-width="2"/><circle cx="400" cy="121.2" r="4.5" fill="#fff" stroke="#8A8A8A" stroke-width="2"/><circle cx="510" cy="95.0" r="4.5" fill="#fff" stroke="#8A8A8A" stroke-width="2"/><text x="70" y="188.0" font-size="12.5" font-weight="700" fill="#000" text-anchor="middle">120</text><text x="70" y="230.8" font-size="12.5" fill="#5A5A5A" text-anchor="middle">115</text><text x="70" y="268" font-size="13" fill="#111" text-anchor="middle">Jan</text><text x="180" y="153.0" font-size="12.5" font-weight="700" fill="#000" text-anchor="middle">140</text><text x="180" y="195.8" font-size="12.5" fill="#5A5A5A" text-anchor="middle">135</text><text x="180" y="268" font-size="13" fill="#111" text-anchor="middle">Feb</text><text x="290" y="135.5" font-size="12.5" font-weight="700" fill="#000" text-anchor="middle">150</text><text x="290" y="176.5" font-size="12.5" fill="#5A5A5A" text-anchor="middle">146</text><text x="290" y="268" font-size="13" fill="#111" text-anchor="middle">Mar</text><text x="400" y="97.0" font-size="12.5" font-weight="700" fill="#000" text-anchor="middle">172</text><text x="400" y="143.2" font-size="12.5" fill="#5A5A5A" text-anchor="middle">165</text><text x="400" y="268" font-size="13" fill="#111" text-anchor="middle">Apr</text><text x="510" y="76.0" font-size="12.5" font-weight="700" fill="#000" text-anchor="middle">184</text><text x="510" y="117.0" font-size="12.5" fill="#5A5A5A" text-anchor="middle">180</text><text x="510" y="268" font-size="13" fill="#111" text-anchor="middle">May</text>
+  <text x="305" y="283" font-size="12" fill="#5A5A5A" text-anchor="middle">Month</text>
+</svg></div>
+      <figcaption>A useful regression model tracks the overall pattern while missing some individual cases.</figcaption>
+    </figure>
+    <div class="ml-tile dark" style="display:flex; flex-direction:column; justify-content:center">
+      <span class="n">COMMON EXAMPLES</span>
+      <h5>Sales forecast</h5>
+      <h5 style="margin-top:0">Delivery time</h5>
+      <h5 style="margin-top:0">Property value</h5>
+      <p style="margin-top:.7rem">Fit a line, curve, or more flexible function to past examples.</p>
+    </div>
+  </div>
+
+  <p class="ml-sub ml-block">Classification predicts a label: “Which bucket?” or “Is this likely?”</p>
+  <div class="ml-grid">
+    <div class="ml-tile dark"><span class="n">LABEL</span><h5>Churn / stay</h5><p>Which customers need attention?</p></div>
+    <div class="ml-tile dark"><span class="n">LABEL</span><h5>Spam / not spam</h5><p>Which messages belong elsewhere?</p></div>
+    <div class="ml-tile dark"><span class="n">LABEL</span><h5>High / medium / low risk</h5><p>Which level supports the decision?</p></div>
+  </div>
+  <p class="ml-note" style="margin-top:.7rem">The output can be a class or a probability that supports a decision.</p>
+
+  <div class="ml-grid wide ml-block">
+    <div class="ml-tile"><span class="n">NUMBER</span><h5>Linear regression</h5><p>Estimates a numeric outcome with weighted inputs.</p></div>
+    <div class="ml-tile"><span class="n">PROBABILITY</span><h5>Logistic regression</h5><p>Estimates the probability of a class.</p></div>
+  </div>
+  <p class="ml-note" style="margin-top:.7rem">Simple baselines with real value: useful when speed, interpretability, and a clear baseline matter.</p>
+
+  <figure class="ml-fig ml-block">
+    <p class="cap-title">Decision trees turn data into a sequence of questions <span style="font-weight:600; color:var(--grey)">· easy to explain</span></p>
+    <div class="ml-scroll"><svg class="min" viewBox="0 0 700 235" role="img" aria-label="A decision tree drawn as a winding path: has usage dropped, outcome likely stay, tenure under six months, outcome likely churn.">
+  <polyline points="10,94.4 15,98.6 20,103.0 25,107.5 30,112.0 35,116.5 40,121.0 45,125.4 50,129.6 55,133.7 60,137.6 65,141.2 70,144.5 75,147.6 80,150.2 85,152.6 90,154.5 95,156.0 100,157.1 105,157.8 110,158.0 115,157.8 120,157.1 125,156.0 130,154.5 135,152.6 140,150.2 145,147.6 150,144.5 155,141.2 160,137.6 165,133.7 170,129.6 175,125.4 180,121.0 185,116.5 190,112.0 195,107.5 200,103.0 205,98.6 210,94.4 215,90.3 220,86.4 225,82.8 230,79.5 235,76.4 240,73.8 245,71.4 250,69.5 255,68.0 260,66.9 265,66.2 270,66.0 275,66.2 280,66.9 285,68.0 290,69.5 295,71.4 300,73.8 305,76.4 310,79.5 315,82.8 320,86.4 325,90.3 330,94.4 335,98.6 340,103.0 345,107.5 350,112.0 355,116.5 360,121.0 365,125.4 370,129.6 375,133.7 380,137.6 385,141.2 390,144.5 395,147.6 400,150.2 405,152.6 410,154.5 415,156.0 420,157.1 425,157.8 430,158.0 435,157.8 440,157.1 445,156.0 450,154.5 455,152.6 460,150.2 465,147.6 470,144.5 475,141.2 480,137.6 485,133.7 490,129.6 495,125.4 500,121.0 505,116.5 510,112.0 515,107.5 520,103.0 525,98.6 530,94.4 535,90.3 540,86.4 545,82.8 550,79.5 555,76.4 560,73.8 565,71.4 570,69.5 575,68.0 580,66.9 585,66.2 590,66.0 595,66.2 600,66.9 605,68.0 610,69.5 615,71.4 620,73.8 625,76.4 630,79.5 635,82.8 640,86.4" fill="none" stroke="#111" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="10,94.4 15,98.6 20,103.0 25,107.5 30,112.0 35,116.5 40,121.0 45,125.4 50,129.6 55,133.7 60,137.6 65,141.2 70,144.5 75,147.6 80,150.2 85,152.6 90,154.5 95,156.0 100,157.1 105,157.8 110,158.0 115,157.8 120,157.1 125,156.0 130,154.5 135,152.6 140,150.2 145,147.6 150,144.5 155,141.2 160,137.6 165,133.7 170,129.6 175,125.4 180,121.0 185,116.5 190,112.0 195,107.5 200,103.0 205,98.6 210,94.4 215,90.3 220,86.4 225,82.8 230,79.5 235,76.4 240,73.8 245,71.4 250,69.5 255,68.0 260,66.9 265,66.2 270,66.0 275,66.2 280,66.9 285,68.0 290,69.5 295,71.4 300,73.8 305,76.4 310,79.5 315,82.8 320,86.4 325,90.3 330,94.4 335,98.6 340,103.0 345,107.5 350,112.0 355,116.5 360,121.0 365,125.4 370,129.6 375,133.7 380,137.6 385,141.2 390,144.5 395,147.6 400,150.2 405,152.6 410,154.5 415,156.0 420,157.1 425,157.8 430,158.0 435,157.8 440,157.1 445,156.0 450,154.5 455,152.6 460,150.2 465,147.6 470,144.5 475,141.2 480,137.6 485,133.7 490,129.6 495,125.4 500,121.0 505,116.5 510,112.0 515,107.5 520,103.0 525,98.6 530,94.4 535,90.3 540,86.4 545,82.8 550,79.5 555,76.4 560,73.8 565,71.4 570,69.5 575,68.0 580,66.9 585,66.2 590,66.0 595,66.2 600,66.9 605,68.0 610,69.5 615,71.4 620,73.8 625,76.4 630,79.5 635,82.8 640,86.4" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8 8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="110" cy="158.0" r="13" fill="#fff" stroke="#000" stroke-width="3"/><text x="110" y="162.5" font-size="13" font-weight="800" fill="#000" text-anchor="middle">?</text><text x="110" y="196.0" font-size="14" font-weight="800" fill="#000" text-anchor="middle">Has usage dropped?</text><text x="110" y="212.0" font-size="11.5" fill="#5A5A5A" text-anchor="middle">Check recent activity</text><circle cx="270" cy="66.0" r="13" fill="#000" stroke="#000" stroke-width="3"/><text x="270" y="70.5" font-size="12" font-weight="800" fill="#fff" text-anchor="middle">✓</text><text x="270" y="32.0" font-size="14" font-weight="800" fill="#000" text-anchor="middle">Outcome: Likely stay</text><text x="270" y="48.0" font-size="11.5" fill="#5A5A5A" text-anchor="middle">Stable usage, low risk</text><circle cx="430" cy="158.0" r="13" fill="#fff" stroke="#000" stroke-width="3"/><text x="430" y="162.5" font-size="13" font-weight="800" fill="#000" text-anchor="middle">?</text><text x="430" y="196.0" font-size="14" font-weight="800" fill="#000" text-anchor="middle">Tenure < 6 months?</text><text x="430" y="212.0" font-size="11.5" fill="#5A5A5A" text-anchor="middle">New customer or established</text><circle cx="590" cy="66.0" r="13" fill="#000" stroke="#000" stroke-width="3"/><text x="590" y="70.5" font-size="12" font-weight="800" fill="#fff" text-anchor="middle">!</text><text x="590" y="32.0" font-size="14" font-weight="800" fill="#000" text-anchor="middle">Outcome: Likely churn</text><text x="590" y="48.0" font-size="11.5" fill="#5A5A5A" text-anchor="middle">Significant drop, high risk</text>
+</svg></div>
+    <figcaption>Each answer sends the case down a different branch.</figcaption>
+  </figure>
+
+  <div class="ml-tile ml-block">
+    <span class="n">REPRESENTATIVE MODEL</span>
+    <h5>Nearest neighbors decide by resemblance</h5>
+    <p>Find past cases that look most like the new case, then use those neighbors to recommend, classify, or assess similarity. Works best when “similar” is meaningful and the data is well-prepared.</p>
+  </div>
+</section>
+        
+<section class="ml-panel" id="ml-p-uns" role="tabpanel" aria-labelledby="ml-t-uns">
+  <h4>Unsupervised learning finds structure without answer labels</h4>
+  <p class="ml-lede">There is no “correct” outcome column. The model surfaces patterns people can investigate.</p>
+  <div class="ml-grid">
+    <div class="ml-tile"><span class="n">01</span><h5>Segmentation</h5><p>Find groups with shared behavior.</p></div>
+    <div class="ml-tile"><span class="n">02</span><h5>Discovery</h5><p>Expose patterns worth investigating.</p></div>
+    <div class="ml-tile"><span class="n">03</span><h5>Compression</h5><p>Simplify complex data.</p></div>
+    <div class="ml-tile"><span class="n">04</span><h5>Anomaly hunting</h5><p>Spot cases that do not fit.</p></div>
+  </div>
+
+  <div class="ml-two ml-block">
+    <figure class="ml-fig">
+      <p class="cap-title">Clustering groups similar cases</p>
+      <div class="ml-scroll"><svg viewBox="0 0 400 270" role="img" aria-label="Illustrative scatter plot of customers forming three groups by spend and frequency.">
+  <line x1="40" y1="240" x2="385" y2="240" stroke="#111" stroke-width="1.5"/>
+  <line x1="40" y1="15" x2="40" y2="240" stroke="#111" stroke-width="1.5"/>
+  <text x="212" y="262" font-size="12" fill="#5A5A5A" text-anchor="middle">Spend →</text>
+  <text x="14" y="128" font-size="12" fill="#5A5A5A" text-anchor="middle" transform="rotate(-90 14 128)">Frequency →</text>
+  <circle cx="114.4" cy="199.0" r="5" fill="#000"/><circle cx="115.0" cy="184.5" r="5" fill="#000"/><circle cx="99.5" cy="186.2" r="5" fill="#000"/><circle cx="144.5" cy="197.5" r="5" fill="#000"/><circle cx="142.8" cy="194.4" r="5" fill="#000"/><circle cx="128.7" cy="193.3" r="5" fill="#000"/><circle cx="83.3" cy="205.1" r="5" fill="#000"/><circle cx="131.1" cy="198.8" r="5" fill="#000"/><circle cx="82.8" cy="159.3" r="5" fill="#000"/><circle cx="100.4" cy="181.8" r="5" fill="#000"/><circle cx="126.7" cy="189.2" r="5" fill="#000"/><circle cx="131.5" cy="178.7" r="5" fill="#000"/><circle cx="126.8" cy="196.9" r="5" fill="#000"/><circle cx="105.5" cy="220.2" r="5" fill="#000"/><circle cx="132.2" cy="211.1" r="5" fill="#000"/><circle cx="106.4" cy="177.0" r="5" fill="#000"/><circle cx="252.4" cy="93.1" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="273.9" cy="99.4" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="250.2" cy="78.2" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="248.5" cy="116.5" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="242.2" cy="99.3" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="269.4" cy="68.8" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="261.1" cy="118.0" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="215.7" cy="89.3" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="257.7" cy="80.6" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="270.9" cy="93.9" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="227.8" cy="109.6" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="274.7" cy="111.6" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="291.7" cy="101.4" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="262.6" cy="72.1" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="273.5" cy="84.2" r="5" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="250.0" cy="72.7" r="5" fill="#fff" stroke="#000" stroke-width="2"/><rect x="276.1" y="192.0" width="9" height="9" fill="#8A8A8A"/><rect x="321.3" y="168.0" width="9" height="9" fill="#8A8A8A"/><rect x="266.3" y="204.3" width="9" height="9" fill="#8A8A8A"/><rect x="324.4" y="209.8" width="9" height="9" fill="#8A8A8A"/><rect x="257.5" y="160.2" width="9" height="9" fill="#8A8A8A"/><rect x="302.6" y="188.7" width="9" height="9" fill="#8A8A8A"/><rect x="273.1" y="216.1" width="9" height="9" fill="#8A8A8A"/><rect x="317.5" y="203.0" width="9" height="9" fill="#8A8A8A"/><rect x="300.4" y="207.4" width="9" height="9" fill="#8A8A8A"/><rect x="327.4" y="210.4" width="9" height="9" fill="#8A8A8A"/><rect x="305.9" y="209.3" width="9" height="9" fill="#8A8A8A"/><rect x="264.1" y="221.0" width="9" height="9" fill="#8A8A8A"/><rect x="314.6" y="209.0" width="9" height="9" fill="#8A8A8A"/><rect x="256.0" y="190.4" width="9" height="9" fill="#8A8A8A"/>
+  <ellipse cx="120" cy="190" rx="58" ry="46" fill="none" stroke="#000" stroke-dasharray="5 4"/>
+  <ellipse cx="260" cy="95"  rx="58" ry="46" fill="none" stroke="#000" stroke-dasharray="5 4"/>
+  <ellipse cx="300" cy="205" rx="54" ry="42" fill="none" stroke="#8A8A8A" stroke-dasharray="5 4"/>
+</svg></div>
+      <figcaption>Inputs might include frequency, spend, recency, or product usage. Human judgment gives the groups meaning and decides what to do next. <i>(Illustrative data.)</i></figcaption>
+    </figure>
+    <figure class="ml-fig">
+      <p class="cap-title">Dimensionality reduction makes complex data easier to see</p>
+      <div class="ml-rise" role="img" aria-label="Five rising steps: many metrics, compress, two dimensions, visible groups, hidden detail.">
+        <div>Many Metrics</div><div>Compress</div><div>Two Dimensions</div><div>Visible Groups</div><div>Hidden Detail</div>
+      </div>
+      <figcaption>Compress many related measurements into a smaller set of useful dimensions. The trade-off: simpler views can hide details.</figcaption>
+    </figure>
+  </div>
+</section>
+        
+<section class="ml-panel" id="ml-p-neu" role="tabpanel" aria-labelledby="ml-t-neu">
+  <h4>Neural, generative and reinforcement models</h4>
+  <p class="ml-lede">Richer problems, with greater trade-offs.</p>
+
+  <figure class="ml-fig">
+    <p class="cap-title">Neural networks learn layered representations</p>
+    <div class="ml-scroll"><svg class="min" viewBox="0 0 610 265" role="img" aria-label="Illustrative neural network with input, two hidden layers and an output layer.">
+  <line x1="80" y1="90" x2="230" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="90" x2="230" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="90" x2="230" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="90" x2="230" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="90" x2="230" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="90" x2="230" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="120" x2="230" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="150" x2="230" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="80" y1="180" x2="230" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="60" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="90" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="120" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="150" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="180" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="60" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="90" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="180" stroke="#CFCFCF" stroke-width="1"/><line x1="230" y1="210" x2="380" y2="210" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="60" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="60" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="90" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="90" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="120" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="120" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="150" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="150" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="180" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="180" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="210" x2="530" y2="120" stroke="#CFCFCF" stroke-width="1"/><line x1="380" y1="210" x2="530" y2="150" stroke="#CFCFCF" stroke-width="1"/><circle cx="80" cy="90" r="8" fill="#000" stroke="#000" stroke-width="2"/><circle cx="80" cy="120" r="8" fill="#000" stroke="#000" stroke-width="2"/><circle cx="80" cy="150" r="8" fill="#000" stroke="#000" stroke-width="2"/><circle cx="80" cy="180" r="8" fill="#000" stroke="#000" stroke-width="2"/><circle cx="230" cy="60" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="230" cy="90" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="230" cy="120" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="230" cy="150" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="230" cy="180" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="230" cy="210" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="60" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="90" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="120" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="150" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="180" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="380" cy="210" r="8" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="530" cy="120" r="8" fill="#000" stroke="#000" stroke-width="2"/><circle cx="530" cy="150" r="8" fill="#000" stroke="#000" stroke-width="2"/><text x="80" y="238" font-size="13.5" font-weight="800" fill="#000" text-anchor="middle">Inputs</text><text x="80" y="254" font-size="11.5" fill="#5A5A5A" text-anchor="middle">raw data</text><text x="230" y="238" font-size="13.5" font-weight="800" fill="#000" text-anchor="middle">Early layers</text><text x="230" y="254" font-size="11.5" fill="#5A5A5A" text-anchor="middle">simple patterns</text><text x="380" y="238" font-size="13.5" font-weight="800" fill="#000" text-anchor="middle">Later layers</text><text x="380" y="254" font-size="11.5" fill="#5A5A5A" text-anchor="middle">richer patterns</text><text x="530" y="238" font-size="13.5" font-weight="800" fill="#000" text-anchor="middle">Output</text><text x="530" y="254" font-size="11.5" fill="#5A5A5A" text-anchor="middle">prediction</text>
+</svg></div>
+    <figcaption>Many small computational units transform inputs through layers. Early layers detect simpler patterns; later layers combine them into richer ones. <i>(Illustrative diagram.)</i></figcaption>
+  </figure>
+
+  <div class="ml-grid wide ml-block">
+    <div class="ml-tile"><span class="n">STRENGTHS</span><h5>Deep learning scales the idea</h5><p>Perception, language, speech, recommendations. More layers and more data can unlock complex pattern recognition.</p></div>
+    <div class="ml-tile dark"><span class="n">COSTS</span><h5>What it asks in return</h5><p>More data, compute, tuning, and explanation challenges.</p></div>
+  </div>
+
+  <div class="ml-block">
+    <p class="ml-sub">Family 04 · Creation — generative models create new content</p>
+    <div class="ml-pills"><span>Drafting</span><span>Summarizing</span><span>Ideation</span><span>Search</span><span>Personalization</span></div>
+    <p class="ml-guard"><b>Guardrail:</b> fluent output is not the same as verified truth.</p>
+  </div>
+
+  <div class="ml-block">
+    <p class="ml-sub">Family 05 · Feedback — reinforcement learning improves through feedback</p>
+    <div class="ml-loop">
+      <span class="s">Observe Environment</span><span class="a">→</span>
+      <span class="s">Choose Action</span><span class="a">→</span>
+      <span class="s">Receive Feedback</span><span class="a">→</span>
+      <span class="s">Improve Policy</span>
+      <span class="back">↺ then repeat. Useful for sequential decisions such as games, robotics, routing, and dynamic recommendations.</span>
+    </div>
+  </div>
+</section>
+        
+<section class="ml-panel" id="ml-p-choose" role="tabpanel" aria-labelledby="ml-t-choose">
+  <h4>How to choose: question, data, risk, then model</h4>
+  <p class="ml-lede">A decision sequence for picking an approach.</p>
+  <div class="ml-steps">
+    <div class="ml-step"><b>01</b><h5>Define</h5><p>The business decision and success metric</p></div>
+    <div class="ml-step"><b>02</b><h5>Check</h5><p>What data and labels actually exist</p></div>
+    <div class="ml-step"><b>03</b><h5>Baseline</h5><p>Start with a simple model</p></div>
+    <div class="ml-step"><b>04</b><h5>Compare</h5><p>Performance, interpretability, speed, and cost</p></div>
+    <div class="ml-step"><b>05</b><h5>Test</h5><p>In the real workflow, not only in a notebook</p></div>
+  </div>
+
+  <p class="ml-sub ml-block">The trust test: model quality is more than accuracy</p>
+  <table class="ml-table">
+    <thead><tr><th>Check</th><th>What to ask</th></tr></thead>
+    <tbody>
+      <tr><td>Performance</td><td>Does it generalize to new cases?</td></tr>
+      <tr><td>Reliability</td><td>Does it behave consistently over time?</td></tr>
+      <tr><td>Fairness and safety</td><td>Who could be harmed by errors or bias?</td></tr>
+      <tr><td>Adoption</td><td>Can people understand and act on the output?</td></tr>
+    </tbody>
+  </table>
+
+  <div class="ml-take">
+    <p class="q">Use the simplest model that earns trust.</p>
+    <p>Predict with regression and classification. Reveal structure with clustering and reduction. Unlock richer problems with neural, generative, and reinforcement models, accepting greater trade-offs.</p>
+    <p><b style="color:#fff">The best model improves a real decision responsibly.</b></p>
+  </div>
+</section>
+        <p class="ml-note">Visuals are redrawn from the slides of the deck. The demand chart uses the figures shown on the slide; the cluster and network diagrams are illustrative.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -789,6 +1270,38 @@ footer{
 </footer>
 
 
+
+<script>
+  (function () {
+    var root = document.getElementById("ml-deck");
+    if (!root) return;
+    root.classList.add("js");
+    var tabs = root.querySelectorAll('[role="tab"]');
+    var panels = root.querySelectorAll('.ml-panel');
+
+    function show(tab, focus) {
+      tabs.forEach(function (t) { t.setAttribute("aria-selected", t === tab ? "true" : "false"); t.tabIndex = t === tab ? 0 : -1; });
+      panels.forEach(function (p) { p.classList.toggle("on", p.id === tab.getAttribute("aria-controls")); });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { show(t); });
+      t.addEventListener("keydown", function (e) {
+        var n = null;
+        if (e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
+        if (e.key === "ArrowLeft")  n = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (n) { e.preventDefault(); show(n, true); }
+      });
+    });
+    show(tabs[0]);
+
+    // the nav tab should land on the featured block and open it at the overview
+    document.querySelectorAll('a[href="#ml-deck"]').forEach(function (a) {
+      a.addEventListener("click", function () { show(tabs[0]); });
+    });
+  })();
+</script>
+
 <!-- ============================================================
      SUPABASE — saves each message into your database
      EDIT the two lines marked below with your own project values
@@ -797,9 +1310,9 @@ footer{
   import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
   // EDIT 1 — your Project URL from Supabase > Settings > API
-  const SUPABASE_URL      = "https://dxcrjjyypyrykilkcfxo.supabase.co";
+  const SUPABASE_URL      = "https://YOUR-PROJECT-ID.supabase.co";
   // EDIT 2 — your "anon public" key from the same page (safe to publish)
-  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4Y3Jqanl5cHlyeWtpbGtjZnhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3NjM5MTIsImV4cCI6MjEwNDMzOTkxMn0.3rJRLJd4ITuEjOlwhr2er9NL2ZXHkb2r5lsUVDVG8EU";
+  const SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
 
   const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
