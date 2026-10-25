@@ -636,6 +636,102 @@ footer{
   .ml-project-preview .ml-preview-visual{grid-template-columns:1fr}
   .ml-preview-node:last-child{grid-column:auto}
 }
+
+/* ============================================================
+   FEATURED VIDEO RESUME — first-screen profile introduction
+   ============================================================ */
+.video-resume-spotlight {
+  max-width: 800px;
+  margin: 2rem auto 2.4rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0 14px 40px -26px rgba(0,0,0,.3);
+}
+.video-resume-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding: 1.15rem 1.4rem;
+}
+.video-resume-eyebrow {
+  margin: 0 0 .22rem;
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.video-resume-top h2 {
+  margin: 0;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.25rem,3.4vw,1.55rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.video-resume-duration {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  padding: .2rem .6rem;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.video-resume-player { background: #07192c; }
+.video-resume-player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #07192c;
+}
+.video-resume-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .9rem 1.5rem;
+  padding: 1.15rem 1.4rem 1.25rem;
+}
+.video-resume-bottom p {
+  flex: 1 1 245px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .91rem;
+  line-height: 1.5;
+}
+.video-resume-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--black);
+  border-radius: 6px;
+  background: var(--black);
+  color: #fff;
+  padding: .68rem 1.1rem;
+  font-size: .9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.video-resume-download:hover {
+  background: #303030;
+  color: #fff;
+  text-decoration: none;
+}
+@media(max-width:640px) {
+  .video-resume-spotlight { margin: 1.5rem auto 2rem; }
+  .video-resume-top { padding: 1rem 1rem; }
+  .video-resume-bottom { padding: 1rem; }
+  .video-resume-download { width: 100%; }
+}
+
 </style>
 </head>
 
@@ -646,6 +742,7 @@ footer{
   <div class="wrap">
     <a class="brand" href="#top">Suraj Chadha</a>
     <nav>
+      <a class="nav-feature" href="#video-resume" aria-label="Watch and download my video resume">▶ Video Resume</a>
       <a class="nav-feature" href="#account-growth" aria-label="Featured Account Growth Manager analytics project">✦ Account Growth</a>
       <a class="nav-feature" href="#ml-deck" aria-label="Featured Machine Learning showcase">✦ ML Showcase</a>
       <a href="#experience">Experience</a>
@@ -671,6 +768,28 @@ footer{
 
     <p class="role">Data Analyst / Manager &nbsp;|&nbsp; AI/ML &amp; Python Developer</p>
     <p class="exp-badge">1.5 years of experience &middot; Mohali, Punjab</p>
+
+    <!-- Video resume — keep video and poster in the same GitHub folder as index.html -->
+    <div class="video-resume-spotlight" id="video-resume" aria-labelledby="video-resume-title">
+      <div class="video-resume-top">
+        <div>
+          <p class="video-resume-eyebrow">Featured introduction · English voiceover</p>
+          <h2 id="video-resume-title">Watch My Video Resume</h2>
+        </div>
+        <span class="video-resume-duration">1 min 46 sec</span>
+      </div>
+      <div class="video-resume-player">
+        <video controls playsinline preload="metadata" poster="Suraj_Chadha_Video_Resume_Poster.jpg" aria-label="Suraj Chadha professional video resume with English voiceover">
+          <source src="Suraj_Chadha_Video_Resume.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+          <a href="Suraj_Chadha_Video_Resume.mp4">View or download the MP4 video</a>.
+        </video>
+      </div>
+      <div class="video-resume-bottom">
+        <p>My professional introduction, technical skills, work experience, and measurable results in Python, data analytics and AI/ML.</p>
+        <a class="video-resume-download" href="Suraj_Chadha_Video_Resume.mp4" download="Suraj_Chadha_Video_Resume.mp4" type="video/mp4">⤓ Download Video Resume (MP4)</a>
+      </div>
+    </div>
 
     <div class="contact-row">
       <a class="chip solid" href="mailto:surajchadhamba@gmail.com">✉ surajchadhamba@gmail.com</a>
